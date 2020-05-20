@@ -1,0 +1,21 @@
+Minimum Spanning Trees
+  The smallest tree that spans a graph
+
+  Tree - No cycles, so MSTs is finding a tree that spans all the      nodes and has the least number (Length of sides added)
+
+Prim's MST Algorithm
+  - Add the closest vertex to what we currently have, choosing the smallest ones
+  - Takes the n smallest edges for n nodes
+
+Dijkstra's Shortest Path Algorithm (O (n^2))
+  - Returns a list showing the shortest paths from a vertex for each node
+  - starts from beginning vertex 
+     - spans every neighbor and checks if number is smaller, adding previous distance and distance to node
+  -May or may not work with negative edges
+  
+Kruskal's Algorithm
+  - finds minimum spanning tree based on edges
+  - goes from smallest edges to largest edges to find minimum spanning tree
+    - Once a cycle is created, the algorithm ignores the side which creates the cycle
+        - (using union find) Checks if starting vertex and ending vertex are both in the group of connected nodes
+  - Runs until n - 1 edges are added
